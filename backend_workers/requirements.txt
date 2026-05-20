@@ -1,0 +1,5 @@
+langgraph>=0.0.15
+langchain-google-genai>=1.0.1
+supabase>=2.3.0
+playwright>=1.40.0
+python-dotenv>=1.0.0

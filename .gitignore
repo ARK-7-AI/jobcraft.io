@@ -1,0 +1,88 @@
+# ==============================================================================
+# JOBCRAFT.IO UNIVERSAL ROOT GITIGNORE
+# ==============================================================================
+
+# 🛑 CRITICAL SECURITY: Never commit local environment credential secrets
+.env
+.env.local
+.env.production
+.env.development
+.env*.local
+*.env
+*.pem
+secrets.json
+
+# 🪵 System Logs & Diagnostics
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+pip-log.txt
+
+# ==============================================================================
+# FRONTEND LAYER: Next.js & Node Ecosystem Guardrails
+# ==============================================================================
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/.vercel/
+frontend/coverage/
+frontend/.pnp
+frontend/.pnp.js
+frontend/*.tsbuildinfo
+frontend/next-env.d.ts
+
+# ==============================================================================
+# AUTOMATION LAYER: Python, LangGraph & Playwright Guardrails
+# ==============================================================================
+# Byte-compiled runtime artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual Environments & Packages
+backend_workers/venv/
+backend_workers/env/
+backend_workers/.venv/
+backend_workers/ENV/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Packaging distributions
+backend_workers/build/
+backend_workers/dist/
+backend_workers/*.egg-info/
+
+# Playwright browser local testing download buckets
+backend_workers/.playwright/
+backend_workers/downloads/
+backend_workers/screenshots/
+
+# ==============================================================================
+# INFRASTRUCTURE & HOST OPERATING SYSTEMS
+# ==============================================================================
+# Local Docker Data Mounting (Prevents mounting states into Git history)
+.docker/
+
+# OS metadata fingerprints
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE Configurations (Optional but keeps your PRs clean)
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
